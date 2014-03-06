@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" media="screen" />
+	<style>
+		.container {
+			margin-top: 10px;
+		}		
+		.container-fluid {
+			padding: 0;
+		}
+		.row {
+			margin-right: 0;
+			margin-bottom: 8px;
+		}
+		.main {
+			margin-bottom: 10px;
+			background-color: #fed;
+			/* border: 1px solid red; */
+		}
+		.inner {
+			background-color: #def;
+			/* border: 1px solid blue; */
+		}		
+	</style>
+    <title>display:block</title>
+  </head>
+
+  <body>
+  
+  	<div class="container">
+  		<div class="row">
+  			<p><code>display: block;</code> - элемент с этим свойством будет блочным. т.е. с переносами строк в начале и конце строки.</p>
+  			<p>Результат работы этого свойства проверим также и на вложенном элементе.</p>
+  		</div>
+  	</div>
+  
+	<div class="container-fluid">
+	
+		<!-- empty, empty --->
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-sm-2">
+				<pre>.main { }
+.inner { }
+				</pre>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10">
+				<div class="main">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span class="inner">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+				<div class="main">
+					Lorem ipsum dolor sit amet, <span class="inner">consectetur adipisicing elit</span>...
+				</div>
+			</div>
+		</div>
+		
+		<!-- block, empty --->
+		<div class="row">		
+			<div class="col-lg-2 col-md-2 col-sm-2">
+				<pre>.main { display: block }
+.inner { }
+				</pre>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10">
+				<div class="main" style="display: block;">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span class="inner">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+				<div class="main" style="display: block;">
+					Lorem ipsum dolor sit amet, <span class="inner">consectetur adipisicing elit</span>...
+				</div>
+			</div>
+		</div>
+		
+		<!-- empty, block  --->
+		<div class="row">		
+			<div class="col-lg-2 col-md-2 col-sm-2">
+				<pre>.main {  }
+.inner { display: block }
+				</pre>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10">
+				<div class="main">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span class="inner" style="display: block;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>			
+				<div class="main" >
+					Lorem ipsum dolor sit amet, <span class="inner" style="display: block;">consectetur adipisicing elit</span>...
+				</div>
+			</div>
+		</div>
+		
+		<!-- block, block  --->
+		<div class="row">		
+			<div class="col-lg-2 col-md-2 col-sm-2">
+				<pre>.main { display: block }
+.inner { display: block }
+			</pre>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10">
+				<div class="main" style="display: block;">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span class="inner" style="display: block;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>			
+				<div class="main" style="display: block;">
+					Lorem ipsum dolor sit amet, <span class="inner" style="display: block;">consectetur adipisicing elit</span>...
+				</div>
+			</div>
+		</div>		
+		
+	</div>
+    
+  </body>
+</html>
